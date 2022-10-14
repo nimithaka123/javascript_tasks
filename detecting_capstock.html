@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Detecting capstock is on/off</h2>
+    <label>Enter a text</label>
+    <input type="text" id="name" onkeyup="checkCapslock()">
+    <span id="show"></span>
+    <script>
+        function checkCapslock(){
+            let input_name=document.getElementById("name").value
+            let show=document.getElementById("show")
+
+            if(/[A-Z]/.test(input_name)){
+                document.getElementById('show').innerHTML="Only lowercase letters"
+
+            }
+            else{
+                document.getElementById('show').innerHTML=" "
+            }
+        }
+    </script>
+</body>
+</html>

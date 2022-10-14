@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Subject Selection</h2>
+        <input type="checkbox" id="selection" onchange="selectall()">Select all
+        <br><br>
+        <input type="checkbox" id="checkbox1">English
+        <br>
+        <input type="checkbox" id="checkbox2">Maths
+        <br>
+        <input type="checkbox" id="checkbox3">Science
+        <br>
+        <input type="checkbox" id="checkbox4">Computer
+
+    </div>
+
+
+    <script>
+        function selectall(){
+            let selectall_checkbox_id=document.querySelector("#selection")
+            let checkbox_id1=document.querySelector("#checkbox1")
+            let checkbox_id2=document.querySelector("#checkbox2")
+            let checkbox_id3=document.querySelector("#checkbox3")
+            let checkbox_id4=document.querySelector("#checkbox4")
+            
+
+
+            if(selectall_checkbox_id.checked==true){
+                checkbox_id1.checked=true
+                checkbox_id2.checked=true
+                checkbox_id3.checked=true
+                checkbox_id4.checked=true
+                
+            }
+            else{
+                checkbox_id1.checked=false
+                checkbox_id2.checked=false
+                checkbox_id3.checked=false
+                checkbox_id4.checked=false
+            }
+
+        }
+    </script>
+</body>
+</html>
